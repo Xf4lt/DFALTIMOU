@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>D.Falt · Cámaras de seguridad IMOU · Elige tu cámara</title>
+  <meta name="description" content="D.Falt: cámaras de seguridad IMOU WiFi e IP (PoE). Desliza, elige y consulta disponibilidad por WhatsApp.">
+  <meta name="theme-color" content="#fffaf5">
+  <meta property="og:title" content="D.Falt · Cámaras de seguridad IMOU">
+  <meta property="og:description" content="Cámaras WiFi e IP: desliza, elige y descubre cada modelo.">
+  <meta property="og:image" content="assets/IPC-K2EN-3H3W.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23ff8a3d'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%231a1816'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app">
+
+    <header class="top">
+      <div class="brand"><span class="brand__dot"></span>D.Falt<span class="brand__sub">· IMOU</span></div>
+      <div class="counter" aria-hidden="true"><b id="cur">01</b><span>/ <i id="tot">30</i></span></div>
+    </header>
+
+    <div class="intro">
+      <h1>Elige tu <em>cámara</em></h1>
+      <p>Desliza para rotar y toca para ver los detalles.</p>
+    </div>
+
+    <nav class="chips" id="chips" aria-label="Filtrar por tipo"></nav>
+
+    <main class="select">
+      <section class="stage" id="stage" aria-roledescription="carrusel" aria-label="Modelos de cámaras">
+        <div class="ghost" id="ghost" aria-hidden="true"></div>
+        <div class="podium" aria-hidden="true"><i></i><i></i></div>
+        <div class="ring" id="ring"></div>
+        <button class="arrow arrow--prev" id="prev" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="arrow arrow--next" id="next" aria-label="Siguiente"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div class="hint" id="hint" aria-hidden="true"><span></span>desliza</div>
+      </section>
+
+      <article class="card" id="card" aria-live="polite">
+        <div class="card__meta">
+          <span class="card__kind" id="kind"></span>
+          <span class="card__conn" id="conn"></span>
+        </div>
+        <h2 class="card__name" id="name"></h2>
+        <p class="card__code" id="code"></p>
+
+        <div class="stat" id="stat">
+          <div class="stat__row"><span>Resolución</span><b id="statVal"></b></div>
+          <div class="stat__bar"><i id="statBar"></i></div>
+        </div>
+
+        <ul class="tags" id="tags"></ul>
+
+        <div class="actions" id="actions"></div>
+      </article>
+    </main>
+
+    <div class="thumbs" id="thumbs" role="listbox" aria-label="Todos los modelos"></div>
+
+    <a class="notice" id="notice" href="#" target="_blank" rel="noopener">
+      <span class="notice__dot"></span>
+      <span>¿Buscas otro modelo? <b>Consulta la disponibilidad de nuevos modelos</b></span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </a>
+
+    <footer class="foot">
+      <span id="footBrand">D.Falt</span>
+      <a id="footTel" href="#"></a>
+      <small>Modelos sujetos a disponibilidad · Imágenes referenciales</small>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
